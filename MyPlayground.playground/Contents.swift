@@ -104,8 +104,8 @@ methodVoidWithParamaters(cod: 17);
 func methodWithReturn(numero: Int) -> Double {
     switch numero{
         case 1: return 20;
-        case 2: return 17.5;
-        default: return 20.17;
+        case 2: return 55.5;
+        default: return 20.99;
     }
 }
 let numReturned = methodWithReturn(numero: 5)
@@ -115,8 +115,8 @@ print(numReturned)
 func methodWithSimpleParameters(_ numero: Int) -> Double {
     switch numero{
         case 1: return 20;
-        case 2: return 17.5;
-        default: return 20.17;
+        case 2: return 55.5;
+        default: return 20.99;
     }
 }
 let simpleParams = methodWithSimpleParameters(5)
@@ -126,11 +126,66 @@ print(simpleParams)
 func methodWithAliasParameters(num numero : Int) -> Double{
     switch numero{
         case 1: return 20;
-        case 2: return 17.5;
-        default: return 20.17;
+        case 2: return 55.5;
+        default: return 20.99;
     }
 }
 let aliasParams = methodWithAliasParameters(num: 1)
 print(aliasParams)
 
 
+/* Controlar valores Null */
+// Retornar null
+func methodNull(name: String) -> String? {
+    if(name == "vacio"){
+            return nil
+    }else{
+        return name
+    }
+}
+var controlNullable = methodNull(name: "vacio")
+print("Valor:", controlNullable as Any)
+
+// Asegurar un valor diferente a null
+func methodWithValue(name: String) -> String? {
+    if(name == "vacio"){
+            return nil
+    }else{
+        return name
+    }
+}
+controlNullable = methodNull(name: "Hugo")
+print("Valor:", controlNullable!)
+
+
+/* Clase y Estructura */
+// Estructura (No necesita constructor)
+struct Course {
+    var code : Int
+    var name : String
+}
+
+// Crear variable con un tipo de Clase
+var c1 = Course(code: 1, name: "Git")
+// Asignar variable
+var c2 = c1
+// Actualizar valores
+c2.name = "Java"
+print(c1,c2)
+
+
+// Clase (Requiere constructor)
+class Book {
+    var code : Int
+    var name : String
+    // Constructor (self = this)
+    init(code : Int, name : String){
+        self.code = code
+        self.name = name
+    }
+}
+
+var b1 = Book(code: 1, name: "C#")
+var b2 = b1
+b2.name = "Python"
+print(b1.name, b2.name)
