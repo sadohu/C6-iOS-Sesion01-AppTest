@@ -189,3 +189,46 @@ var b1 = Book(code: 1, name: "C#")
 var b2 = b1
 b2.name = "Python"
 print(b1.name, b2.name)
+
+
+
+/* Protocolos (Interfases) */
+protocol PMethods{
+    func example()
+}
+
+/* Herencias */
+class Person {
+    var code : Int
+    var name : String
+    // Constructor (self = this)
+    init(code : Int, name : String){
+        self.code = code
+        self.name = name
+    }
+}
+// Clase heredada : Hereda(Padre), Protocolo(Implementación)
+class Teacher : Person, PMethods{
+    var lastName : String
+    
+    init(code : Int, name : String, lastName : String){
+        self.lastName = lastName
+        super.init(code: code, name: name)
+    }
+    
+    func example() {
+        print("Ejemplo de protocolo")
+    }
+    
+    func printData(){
+        print("Clase Profesor")
+    }
+}
+
+// Creando objecto de clase Teacher
+var bean = Teacher(code: 1, name: "Donie", lastName: "Luperdi")
+print(bean.code, bean.name, bean.lastName)
+
+
+
+
