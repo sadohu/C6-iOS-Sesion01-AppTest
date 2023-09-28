@@ -15,6 +15,7 @@
 		41B7A94E2AC5002A003D83D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41B7A94C2AC5002A003D83D2 /* LaunchScreen.storyboard */; };
 		41B7A9562AC50304003D83D2 /* Cliente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B7A9552AC50304003D83D2 /* Cliente.swift */; };
 		41B7A9582AC5049C003D83D2 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B7A9572AC5049C003D83D2 /* ItemTableViewCell.swift */; };
+		41B7A95C2AC516A8003D83D2 /* DatosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B7A95B2AC516A8003D83D2 /* DatosViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		41B7A94F2AC5002A003D83D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41B7A9552AC50304003D83D2 /* Cliente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cliente.swift; sourceTree = "<group>"; };
 		41B7A9572AC5049C003D83D2 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		41B7A95B2AC516A8003D83D2 /* DatosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatosViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				41B7A94F2AC5002A003D83D2 /* Info.plist */,
 				41B7A9552AC50304003D83D2 /* Cliente.swift */,
 				41B7A9572AC5049C003D83D2 /* ItemTableViewCell.swift */,
+				41B7A95B2AC516A8003D83D2 /* DatosViewController.swift */,
 			);
 			path = AppTables;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41B7A95C2AC516A8003D83D2 /* DatosViewController.swift in Sources */,
 				41B7A9562AC50304003D83D2 /* Cliente.swift in Sources */,
 				41B7A9462AC50028003D83D2 /* ViewController.swift in Sources */,
 				41B7A9582AC5049C003D83D2 /* ItemTableViewCell.swift in Sources */,
