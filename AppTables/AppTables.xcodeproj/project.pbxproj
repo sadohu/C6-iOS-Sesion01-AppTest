@@ -13,6 +13,8 @@
 		41B7A9492AC50028003D83D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41B7A9472AC50028003D83D2 /* Main.storyboard */; };
 		41B7A94B2AC5002A003D83D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41B7A94A2AC5002A003D83D2 /* Assets.xcassets */; };
 		41B7A94E2AC5002A003D83D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41B7A94C2AC5002A003D83D2 /* LaunchScreen.storyboard */; };
+		41B7A9562AC50304003D83D2 /* Cliente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B7A9552AC50304003D83D2 /* Cliente.swift */; };
+		41B7A9582AC5049C003D83D2 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B7A9572AC5049C003D83D2 /* ItemTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		41B7A94A2AC5002A003D83D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		41B7A94D2AC5002A003D83D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		41B7A94F2AC5002A003D83D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		41B7A9552AC50304003D83D2 /* Cliente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cliente.swift; sourceTree = "<group>"; };
+		41B7A9572AC5049C003D83D2 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				41B7A94A2AC5002A003D83D2 /* Assets.xcassets */,
 				41B7A94C2AC5002A003D83D2 /* LaunchScreen.storyboard */,
 				41B7A94F2AC5002A003D83D2 /* Info.plist */,
+				41B7A9552AC50304003D83D2 /* Cliente.swift */,
+				41B7A9572AC5049C003D83D2 /* ItemTableViewCell.swift */,
 			);
 			path = AppTables;
 			sourceTree = "<group>";
@@ -138,7 +144,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41B7A9562AC50304003D83D2 /* Cliente.swift in Sources */,
 				41B7A9462AC50028003D83D2 /* ViewController.swift in Sources */,
+				41B7A9582AC5049C003D83D2 /* ItemTableViewCell.swift in Sources */,
 				41B7A9422AC50028003D83D2 /* AppDelegate.swift in Sources */,
 				41B7A9442AC50028003D83D2 /* SceneDelegate.swift in Sources */,
 			);
