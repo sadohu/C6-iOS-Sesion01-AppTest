@@ -188,7 +188,7 @@ class Book {
 var b1 = Book(code: 1, name: "C#")
 var b2 = b1
 b2.name = "Python"
-print(b1.name, b2.name)
+print("Book:", b1.name, b2.name)
 
 
 
@@ -227,8 +227,31 @@ class Teacher : Person, PMethods{
 
 // Creando objecto de clase Teacher
 var bean = Teacher(code: 1, name: "Donie", lastName: "Luperdi")
-print(bean.code, bean.name, bean.lastName)
+print("Teacher:", bean.code, bean.name, bean.lastName)
 
 
 
+/* Challenge */
+/*
+ Crear una función que permita el ingreso de un número de tres cifras
+ y retorne en una tupla:
+ 1. Unidad
+ 2. Decena
+ 3. Centena
+ 4. El mayor número formado por los tres números
 
+*/
+
+func challenge1(numero : Int) -> (Int, Int, Int, Int){
+    var unidad = numero % 10
+    var decena = numero % 100 / 10
+    var centena = numero / 100
+    
+    return (unidad, decena, centena, 0)
+}
+
+var result1 = challenge1(numero: 123)
+print("1. Unidad:", result1.0)
+print("2. Decena:", result1.1)
+print("3. Centena:", result1.2)
+print("4. Mayor Número:", result1.3)
