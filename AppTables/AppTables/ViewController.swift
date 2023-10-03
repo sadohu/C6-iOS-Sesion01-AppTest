@@ -33,7 +33,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     // Método
     func llenarClientes(){
         listaClientes.append(Cliente(codigo: 1, nombre: "Juan", apellido: "Gonzales", edad: 20, sueldo: 1200, foto: "persona1"));
-        listaClientes.append(Cliente(codigo: 1, nombre: "Ernesto", apellido: "Santiago", edad: 30, sueldo: 1800, foto: "persona2"))
+        listaClientes.append(Cliente(codigo: 2, nombre: "Ernesto", apellido: "Santiago", edad: 30, sueldo: 1800, foto: "persona2"))
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

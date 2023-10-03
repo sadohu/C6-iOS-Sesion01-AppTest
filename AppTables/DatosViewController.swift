@@ -19,5 +19,12 @@ class DatosViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad();
+        // Imprimir valores que se encuentra en el objeto
+        lblCodigo.text = "Codigo: " + String(bean.codigo);
+        lblNombre.text = "Nombre: " + String(bean.nombre);
+        lblApellido.text = "Apellido: " + String(bean.apellido);
+        lblEdad.text = "Edad: " + String(bean.edad);
+        lblSueldo.text = "Sueldo: " + String(bean.edad);
+        imgFoto.image = UIImage.init(named: bean.foto);
     }
 }
