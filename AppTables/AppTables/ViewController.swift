@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     // Arreglo de estructura
     var listaClientes: [Cliente] = []
     // Elemento table
@@ -17,6 +17,8 @@ class ViewController: UIViewController, UITableViewDataSource {
         super.viewDidLoad();
         // Indicar a la tabla que trabaja con origen de datos
         tvClientes.dataSource = self;
+        // Añadir el protocolo a la tabla
+        tvClientes.delegate = self;
         // Llamar al metodo para llenar los datos
         llenarClientes();
         tvClientes.rowHeight = 150;
@@ -44,6 +46,12 @@ class ViewController: UIViewController, UITableViewDataSource {
         vista.lblNombres.text = listaClientes[indexPath.row].nombre;
         vista.imgFoto.image = UIImage(named: listaClientes[indexPath.row].foto);
         return vista;
+    }
+    
+    // Funcion para seleccionar la celda o fila de la tabla
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // Identificador de la arrow entre vistas
+        performSegue(withIdentifier: "datos", sender: self);
     }
 }
 
