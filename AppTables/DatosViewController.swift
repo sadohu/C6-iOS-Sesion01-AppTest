@@ -14,6 +14,8 @@ class DatosViewController: UIViewController {
     @IBOutlet weak var lblEdad: UILabel!
     @IBOutlet weak var lblSueldo: UILabel!
     @IBOutlet weak var imgFoto: UIImageView!
+    // Variable de la estructura Cliente (declarar no nulo "!")
+    var bean : Cliente!
     
     override func viewDidLoad() {
         super.viewDidLoad();

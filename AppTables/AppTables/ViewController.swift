@@ -12,6 +12,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var listaClientes: [Cliente] = []
     // Elemento table
     @IBOutlet weak var tvClientes: UITableView!
+    // Capturar el indexPath de la tabla
+    var indexCliente = -1;
     
     override func viewDidLoad() {
         super.viewDidLoad();
@@ -50,8 +52,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     // Funcion para seleccionar la celda o fila de la tabla
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // Asignar el index de la tabla
+        indexCliente = indexPath.row;
         // Identificador de la arrow entre vistas
         performSegue(withIdentifier: "datos", sender: self);
+    }
+    
+    // Metodo para enviar datos a otra pantalla
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Crear objeto de la clase DatosViewController
+        let destino = segue.destination as! DatosViewController;
+        destino.bean = listaClientes[indexCliente];
     }
 }
 
