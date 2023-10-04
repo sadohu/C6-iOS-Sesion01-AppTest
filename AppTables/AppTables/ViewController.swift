@@ -27,7 +27,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
 
     @IBAction func btnNuevo(_ sender: UIButton) {
-        
+        // Identificador de la arrow entre vistas "Segue"
+        performSegue(withIdentifier: "nuevo", sender: self);
     }
     
     // Método
@@ -60,9 +61,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     // Metodo para enviar datos a otra pantalla
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Crear objeto de la clase DatosViewController
-        let destino = segue.destination as! DatosViewController;
-        destino.bean = listaClientes[indexCliente];
+        // Validar segue
+        if(segue.identifier == "datos"){
+            // Crear objeto de la clase DatosViewController
+            let destino = segue.destination as! DatosViewController;
+            destino.bean = listaClientes[indexCliente];
+        }
     }
 }
 
