@@ -17,6 +17,8 @@
 		41B7A9582AC5049C003D83D2 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B7A9572AC5049C003D83D2 /* ItemTableViewCell.swift */; };
 		41B7A95C2AC516A8003D83D2 /* DatosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B7A95B2AC516A8003D83D2 /* DatosViewController.swift */; };
 		41B92BBC2ACDE9C800FB17C8 /* NuevoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B92BBB2ACDE9C800FB17C8 /* NuevoViewController.swift */; };
+		41B92C052ACDFFF200FB17C8 /* ConsorcioModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 41B92C032ACDFFF200FB17C8 /* ConsorcioModel.xcdatamodeld */; };
+		41B92C072ACE028E00FB17C8 /* ClienteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B92C062ACE028E00FB17C8 /* ClienteController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		41B7A9572AC5049C003D83D2 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		41B7A95B2AC516A8003D83D2 /* DatosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatosViewController.swift; sourceTree = SOURCE_ROOT; };
 		41B92BBB2ACDE9C800FB17C8 /* NuevoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NuevoViewController.swift; sourceTree = "<group>"; };
+		41B92C042ACDFFF200FB17C8 /* ConsorcioModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ConsorcioModel.xcdatamodel; sourceTree = "<group>"; };
+		41B92C062ACE028E00FB17C8 /* ClienteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClienteController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,8 @@
 				41B7A9572AC5049C003D83D2 /* ItemTableViewCell.swift */,
 				41B7A95B2AC516A8003D83D2 /* DatosViewController.swift */,
 				41B92BBB2ACDE9C800FB17C8 /* NuevoViewController.swift */,
+				41B92C032ACDFFF200FB17C8 /* ConsorcioModel.xcdatamodeld */,
+				41B92C062ACE028E00FB17C8 /* ClienteController.swift */,
 			);
 			path = AppTables;
 			sourceTree = "<group>";
@@ -153,9 +159,11 @@
 				41B7A95C2AC516A8003D83D2 /* DatosViewController.swift in Sources */,
 				41B7A9562AC50304003D83D2 /* Cliente.swift in Sources */,
 				41B92BBC2ACDE9C800FB17C8 /* NuevoViewController.swift in Sources */,
+				41B92C052ACDFFF200FB17C8 /* ConsorcioModel.xcdatamodeld in Sources */,
 				41B7A9462AC50028003D83D2 /* ViewController.swift in Sources */,
 				41B7A9582AC5049C003D83D2 /* ItemTableViewCell.swift in Sources */,
 				41B7A9422AC50028003D83D2 /* AppDelegate.swift in Sources */,
+				41B92C072ACE028E00FB17C8 /* ClienteController.swift in Sources */,
 				41B7A9442AC50028003D83D2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -372,6 +380,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		41B92C032ACDFFF200FB17C8 /* ConsorcioModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				41B92C042ACDFFF200FB17C8 /* ConsorcioModel.xcdatamodel */,
+			);
+			currentVersion = 41B92C042ACDFFF200FB17C8 /* ConsorcioModel.xcdatamodel */;
+			path = ConsorcioModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 41B7A9362AC50028003D83D2 /* Project object */;
 }
