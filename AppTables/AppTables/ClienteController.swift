@@ -48,4 +48,16 @@ class ClienteController: NSObject {
         }
         return result;
     }
+    
+    //Actualizar Cliente
+    func updateCliente(bean : ClienteEntity){
+        let delegate = UIApplication.shared.delegate as! AppDelegate;
+        let context = delegate.persistentContainer.viewContext;
+        // Actualizar
+        do{
+            try context.save();
+        } catch(let error as NSError){
+            print(error.localizedDescription);
+        }
+    }
 }
