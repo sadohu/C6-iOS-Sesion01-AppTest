@@ -29,7 +29,9 @@ class NuevoViewController: UIViewController {
         sueldo = Double(txtSueldo.text ?? "") ?? 0;
         // Crear varible de la estructura Cliente
         let data = Cliente(codigo: codigo, nombre: nombre, apellido: apellido, edad: edad, sueldo: sueldo, foto: "");
-        
+        // Invocar al método registrarCliente
+        ClienteController().addCliente(bean: data);
+        print("sucess!");
     }
     
 }
