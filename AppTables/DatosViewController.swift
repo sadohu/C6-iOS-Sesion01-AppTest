@@ -27,6 +27,7 @@ class DatosViewController: UIViewController {
         txtSueldo.text = String(bean.edad);
 //        imgFoto.image = UIImage.init(named: bean.foto);
     }
+    
     @IBAction func btnEdit(_ sender: Any) {
         // Actualizar los valores de los atributos del objeto "bean"
         var edad : Int16;
@@ -45,7 +46,26 @@ class DatosViewController: UIViewController {
         ClienteController().updateCliente(bean: bean);
         print("update success")
     }
+    
     @IBAction func btnDelete(_ sender: Any) {
-        
+        // Crear alerta
+        let alert = UIAlertController(
+            title: "SISTEMA",
+            message: "Seguro de eliminar?",
+            preferredStyle: .alert);
+        // Boton Aceptar
+        let buttonAcept = UIAlertAction(
+            title: "Aceptar",
+            style: .default,
+            handler: {
+                action in ClienteController().deleteCliente(bean: self.bean);
+            });
+        // Agregar accion a la alerta
+        alert.addAction(buttonAcept);
+        // Boton Cancelar y accion
+        let buttonCancel = UIAlertAction(title: "Cancelar", style: .cancel);
+        alert.addAction(buttonCancel);
+        // Mostrar la alerta
+        present(alert, animated: true);
     }
 }

@@ -60,4 +60,17 @@ class ClienteController: NSObject {
             print(error.localizedDescription);
         }
     }
+    
+    // Eliminar Cliente
+    func deleteCliente(bean: ClienteEntity){
+        let delegate = UIApplication.shared.delegate as! AppDelegate;
+        let context = delegate.persistentContainer.viewContext;
+        // Eliminar
+        do{
+            context.delete(bean);
+            try context.save();
+        } catch(let error as NSError){
+            print(error.localizedDescription);
+        }
+    }
 }
