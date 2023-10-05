@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     // Arreglo de estructura
-    var listaClientes: [Cliente] = []
+    var listaClientes: [ClienteEntity] = []
     // Elemento table
     @IBOutlet weak var tvClientes: UITableView!
     // Capturar el indexPath de la tabla
@@ -17,12 +17,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     override func viewDidLoad() {
         super.viewDidLoad();
+        listaClientes = ClienteController().listCliente();
         // Indicar a la tabla que trabaja con origen de datos
         tvClientes.dataSource = self;
         // Añadir el protocolo a la tabla
         tvClientes.delegate = self;
         // Llamar al metodo para llenar los datos
-        llenarClientes();
+        // llenarClientes(); --> Se eliminó el metodo y se usa Nueva forma desde CoreData
         tvClientes.rowHeight = 150;
     }
 
@@ -30,13 +31,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // Identificador de la arrow entre vistas "Segue"
         performSegue(withIdentifier: "nuevo", sender: self);
     }
-    
-    // Método
-    func llenarClientes(){
-        listaClientes.append(Cliente(codigo: 1, nombre: "Juan", apellido: "Gonzales", edad: 20, sueldo: 1200, foto: "persona1"));
-        listaClientes.append(Cliente(codigo: 2, nombre: "Ernesto", apellido: "Santiago", edad: 30, sueldo: 1800, foto: "persona2"))
-    }
-    
+        
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return listaClientes.count;
     }
@@ -47,7 +42,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // Acceder a los atributos
         vista.lblCodigo.text = String( listaClientes[indexPath.row].codigo);
         vista.lblNombres.text = listaClientes[indexPath.row].nombre;
-        vista.imgFoto.image = UIImage(named: listaClientes[indexPath.row].foto);
+//        vista.imgFoto.image = UIImage(named: listaClientes[indexPath.row].foto);
         return vista;
     }
     

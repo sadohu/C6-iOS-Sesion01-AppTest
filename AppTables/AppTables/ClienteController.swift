@@ -31,7 +31,21 @@ class ClienteController: NSObject {
     }
     
     // Listar Cliente
-    func listCliente(){
-        
+    func listCliente() -> [ClienteEntity]{
+        // nuevo objeto de clase AppDelegate (donde se encuentra la conexion)
+        let delegate = UIApplication.shared.delegate as! AppDelegate;
+        // Acceder a la base de datos
+        let context = delegate.persistentContainer.viewContext;
+        // Declarar un arreglo de la entidad ClienteEntity
+        var result : [ClienteEntity]!
+        do{
+            // Obtener lista de la entidad ClienteEntity en NSFetchRequest
+            let data = ClienteEntity.fetchRequest();
+            // Convertir "data"(NSFetchRequest) en un arreglo ClienteEntity
+            result = try context.fetch(data);
+        } catch(let error as NSError){
+            print(error.localizedDescription);
+        }
+        return result;
     }
 }
