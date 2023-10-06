@@ -15,6 +15,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     // Capturar el indexPath de la tabla
     var indexCliente = -1;
     
+    let refreshControl = UIRefreshControl();
+    
     override func viewDidLoad() {
         super.viewDidLoad();
         listaClientes = ClienteController().listCliente();
@@ -25,6 +27,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // Llamar al metodo para llenar los datos
         // llenarClientes(); --> Se eliminó el metodo y se usa Nueva forma desde CoreData
         tvClientes.rowHeight = 150;
+        
+        refreshControl.addTarget(self, action: #selector(updateData), for: .valueChanged);
+        tvClientes.refreshControl = refreshControl;
     }
 
     @IBAction func btnNuevo(_ sender: UIButton) {
@@ -62,6 +67,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             let destino = segue.destination as! DatosViewController;
             destino.bean = listaClientes[indexCliente];
         }
+    }
+    
+    @objc func updateData() {
+      // Aquí obtener los datos actualizados
+        listaClientes = ClienteController().listCliente();
+      // Recargar la tabla
+      self.tvClientes.reloadData()
+      // Terminar animación refresh
+      self.refreshControl.endRefreshing()
     }
 }
 
