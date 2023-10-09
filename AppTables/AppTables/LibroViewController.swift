@@ -7,11 +7,18 @@
 
 import UIKit
 
-class LibroViewController: UIViewController {
+class LibroViewController: UIViewController , UICollectionViewDataSource{
     @IBOutlet weak var cvLibros: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        <#code#>
+    }
 }
