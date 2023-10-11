@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LibroViewController: UIViewController , UICollectionViewDataSource{
+class LibroViewController: UIViewController , UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     var libroList : [Libro] = [];
     
@@ -15,14 +15,27 @@ class LibroViewController: UIViewController , UICollectionViewDataSource{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        cvLibros.dataSource = self;
+        cvLibros.delegate = self;
+        // Permitir el desplazamiento
+        cvLibros.isPagingEnabled = true;
+        fillDataLibroList();
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        <#code#>
+        return libroList.count;
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
+        // Crear objeto de la clase ItemCollectionViewCell
+        let item = cvLibros.dequeueReusableCell(withReuseIdentifier: "libro", for: indexPath) as! ItemCollectionViewCell;
+        item.imgLibro.image = UIImage(named: libroList[indexPath.row].foto);
+        item.lblLibro.text = libroList[indexPath.row].titulo;
+        return item;
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 110, height: 150);
     }
     
     func fillDataLibroList(){
