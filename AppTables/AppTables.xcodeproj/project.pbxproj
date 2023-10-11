@@ -21,6 +21,7 @@
 		41B92C072ACE028E00FB17C8 /* ClienteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B92C062ACE028E00FB17C8 /* ClienteController.swift */; };
 		41BA60822AD11A640011C9DD /* LibroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BA60812AD11A640011C9DD /* LibroViewController.swift */; };
 		41BA60842AD4BFFB0011C9DD /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BA60832AD4BFFB0011C9DD /* ItemCollectionViewCell.swift */; };
+		41BA60862AD4C2740011C9DD /* Libro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BA60852AD4C2740011C9DD /* Libro.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		41B92C062ACE028E00FB17C8 /* ClienteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClienteController.swift; sourceTree = "<group>"; };
 		41BA60812AD11A640011C9DD /* LibroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibroViewController.swift; sourceTree = "<group>"; };
 		41BA60832AD4BFFB0011C9DD /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		41BA60852AD4C2740011C9DD /* Libro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Libro.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				41B92BBB2ACDE9C800FB17C8 /* NuevoViewController.swift */,
 				41BA60812AD11A640011C9DD /* LibroViewController.swift */,
 				41BA60832AD4BFFB0011C9DD /* ItemCollectionViewCell.swift */,
+				41BA60852AD4C2740011C9DD /* Libro.swift */,
 			);
 			path = AppTables;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 				41B92BBC2ACDE9C800FB17C8 /* NuevoViewController.swift in Sources */,
 				41B92C052ACDFFF200FB17C8 /* ConsorcioModel.xcdatamodeld in Sources */,
 				41B7A9462AC50028003D83D2 /* ViewController.swift in Sources */,
+				41BA60862AD4C2740011C9DD /* Libro.swift in Sources */,
 				41B7A9582AC5049C003D83D2 /* ItemTableViewCell.swift in Sources */,
 				41B7A9422AC50028003D83D2 /* AppDelegate.swift in Sources */,
 				41B92C072ACE028E00FB17C8 /* ClienteController.swift in Sources */,
