@@ -24,6 +24,7 @@
 		41BA60862AD4C2740011C9DD /* Libro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BA60852AD4C2740011C9DD /* Libro.swift */; };
 		41D6AB1D2AD77AC000384BB2 /* Medicamento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D6AB1C2AD77AC000384BB2 /* Medicamento.swift */; };
 		41D6AB1F2AD77B5F00384BB2 /* MedicamentoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D6AB1E2AD77B5F00384BB2 /* MedicamentoViewController.swift */; };
+		41D6AB212AD7828600384BB2 /* MedicamentoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D6AB202AD7828600384BB2 /* MedicamentoTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		41BA60852AD4C2740011C9DD /* Libro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Libro.swift; sourceTree = "<group>"; };
 		41D6AB1C2AD77AC000384BB2 /* Medicamento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medicamento.swift; sourceTree = "<group>"; };
 		41D6AB1E2AD77B5F00384BB2 /* MedicamentoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicamentoViewController.swift; sourceTree = "<group>"; };
+		41D6AB202AD7828600384BB2 /* MedicamentoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicamentoTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 			children = (
 				41D6AB1C2AD77AC000384BB2 /* Medicamento.swift */,
 				41D6AB1E2AD77B5F00384BB2 /* MedicamentoViewController.swift */,
+				41D6AB202AD7828600384BB2 /* MedicamentoTableViewCell.swift */,
 			);
 			path = Medicamento;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				41BA60862AD4C2740011C9DD /* Libro.swift in Sources */,
 				41B7A9582AC5049C003D83D2 /* ItemTableViewCell.swift in Sources */,
 				41B7A9422AC50028003D83D2 /* AppDelegate.swift in Sources */,
+				41D6AB212AD7828600384BB2 /* MedicamentoTableViewCell.swift in Sources */,
 				41B92C072ACE028E00FB17C8 /* ClienteController.swift in Sources */,
 				41B7A9442AC50028003D83D2 /* SceneDelegate.swift in Sources */,
 				41BA60822AD11A640011C9DD /* LibroViewController.swift in Sources */,

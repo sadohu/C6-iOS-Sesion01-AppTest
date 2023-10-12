@@ -7,13 +7,18 @@
 
 import UIKit
 
-class MedicamentoViewController: UIViewController {
+class MedicamentoViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var medicamentoList : [Medicamento] = [];
 
+    @IBOutlet weak var tvMedicamentos: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadMedicamentos();
+        tvMedicamentos.dataSource = self;
+        tvMedicamentos.delegate = self;
+        tvMedicamentos.rowHeight = 100;
     }
 
     func loadMedicamentos(){
@@ -25,7 +30,10 @@ class MedicamentoViewController: UIViewController {
                     // [Medicamento] hace referencia a más de un objeto, de ser solo uno indicar solo como: Medicamento
                     let medicamentos = try JSONDecoder().decode([Medicamento].self, from: data!);
                     self.medicamentoList = medicamentos;
-                    print(medicamentos);
+//                    print(medicamentos);
+                    DispatchQueue.main.async {
+                        self.tvMedicamentos.reloadData();
+                    }
                 }
             }catch{
                 print(error.localizedDescription);
@@ -34,5 +42,16 @@ class MedicamentoViewController: UIViewController {
         
         // Inicar tarea
         work.resume();
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return medicamentoList.count;
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let vista = tvMedicamentos.dequeueReusableCell(withIdentifier: "cellMedicamento") as! MedicamentoTableViewCell;
+        vista.lblCodigo.text = "Codigo: " + String( medicamentoList[indexPath.row].codigo);
+        vista.lblNombre.text = "Nombre: " + String( medicamentoList[indexPath.row].nombre);
+        return vista;
     }
 }
