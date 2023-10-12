@@ -13,6 +13,7 @@ class MedicamentoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadMedicamentos();
     }
 
     func loadMedicamentos(){
