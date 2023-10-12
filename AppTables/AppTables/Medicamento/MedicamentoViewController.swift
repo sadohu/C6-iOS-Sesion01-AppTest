@@ -24,7 +24,7 @@ class MedicamentoViewController: UIViewController, UITableViewDataSource, UITabl
     func loadMedicamentos(){
         let URLAPI = "https://puedeser.onrender.com/medicamento/lista";
         let url = URL(string: URLAPI);
-        let work = URLSession.shared.dataTask(with: url!) { data, urlResponse, error in
+        let task = URLSession.shared.dataTask(with: url!) { data, urlResponse, error in
             do{
                 if(error == nil){
                     // [Medicamento] hace referencia a más de un objeto, de ser solo uno indicar solo como: Medicamento
@@ -41,7 +41,7 @@ class MedicamentoViewController: UIViewController, UITableViewDataSource, UITabl
         }
         
         // Inicar tarea
-        work.resume();
+        task.resume();
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -53,5 +53,9 @@ class MedicamentoViewController: UIViewController, UITableViewDataSource, UITabl
         vista.lblCodigo.text = "Codigo: " + String( medicamentoList[indexPath.row].codigo);
         vista.lblNombre.text = "Nombre: " + String( medicamentoList[indexPath.row].nombre);
         return vista;
+    }
+    
+    @IBAction func btnNuevo(_ sender: UIButton) {
+        performSegue(withIdentifier: "nuevoMedicamentoView", sender: self);
     }
 }

@@ -25,6 +25,7 @@
 		41D6AB1D2AD77AC000384BB2 /* Medicamento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D6AB1C2AD77AC000384BB2 /* Medicamento.swift */; };
 		41D6AB1F2AD77B5F00384BB2 /* MedicamentoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D6AB1E2AD77B5F00384BB2 /* MedicamentoViewController.swift */; };
 		41D6AB212AD7828600384BB2 /* MedicamentoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D6AB202AD7828600384BB2 /* MedicamentoTableViewCell.swift */; };
+		41D6AB232AD78AB600384BB2 /* NuevoMedicamentoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D6AB222AD78AB600384BB2 /* NuevoMedicamentoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		41D6AB1C2AD77AC000384BB2 /* Medicamento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medicamento.swift; sourceTree = "<group>"; };
 		41D6AB1E2AD77B5F00384BB2 /* MedicamentoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicamentoViewController.swift; sourceTree = "<group>"; };
 		41D6AB202AD7828600384BB2 /* MedicamentoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicamentoTableViewCell.swift; sourceTree = "<group>"; };
+		41D6AB222AD78AB600384BB2 /* NuevoMedicamentoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NuevoMedicamentoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				41D6AB1C2AD77AC000384BB2 /* Medicamento.swift */,
 				41D6AB1E2AD77B5F00384BB2 /* MedicamentoViewController.swift */,
 				41D6AB202AD7828600384BB2 /* MedicamentoTableViewCell.swift */,
+				41D6AB222AD78AB600384BB2 /* NuevoMedicamentoViewController.swift */,
 			);
 			path = Medicamento;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				41B7A95C2AC516A8003D83D2 /* DatosViewController.swift in Sources */,
+				41D6AB232AD78AB600384BB2 /* NuevoMedicamentoViewController.swift in Sources */,
 				41BA60842AD4BFFB0011C9DD /* ItemCollectionViewCell.swift in Sources */,
 				41B7A9562AC50304003D83D2 /* Cliente.swift in Sources */,
 				41D6AB1F2AD77B5F00384BB2 /* MedicamentoViewController.swift in Sources */,
