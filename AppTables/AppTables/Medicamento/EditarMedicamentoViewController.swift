@@ -42,6 +42,27 @@ class EditarMedicamentoViewController: UIViewController {
         updateMedicamento(bean: medicamento);
     }
     
+    @IBAction func btnEliminar(_ sender: UIButton) {
+        let alert = UIAlertController(
+            title: "SISTEMA",
+            message: "Seguro de eliminar?",
+            preferredStyle: .alert);
+        let buttonAcept = UIAlertAction(
+            title: "Aceptar",
+            style: .default,
+            handler: { action in
+                
+                let codigo : Int
+                codigo = Int(self.txtCodigo.text ?? "0") ?? 0;
+                self.deleteMedicamento(codigo: codigo);
+                
+            });
+        alert.addAction(buttonAcept);
+        let buttonCancel = UIAlertAction(title: "Cancelar", style: .cancel);
+        alert.addAction(buttonCancel);
+        present(alert, animated: true);        
+    }
+    
     func updateMedicamento(bean : Medicamento){
         do{
             // Convertir a Json el valor del parametro bean
@@ -77,6 +98,19 @@ class EditarMedicamentoViewController: UIViewController {
         } catch{
             print("Holi");
         }
+    }
+    
+    func deleteMedicamento(codigo : Int){
+        let URLAPI = "https://puedeser.onrender.com/medicamento/eliminar/" + String(codigo);
+        let url = URL(string: URLAPI);
+        var request = URLRequest(url: url!);
+        request.httpMethod = "DELETE";
+        let task = URLSession.shared.dataTask(with: request){data, reponse, error in
+            if(error == nil){
+                print("Medicamento eliminado");
+            }
+        }
+        task.resume();
     }
     
 }

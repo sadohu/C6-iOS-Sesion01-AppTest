@@ -561,14 +561,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xEX-yG-CdV">
-                                <rect key="frame" x="134" y="572" width="125" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EOK-G4-msW">
+                                <rect key="frame" x="234" y="576" width="125" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Modificar"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Eliminar"/>
                                 <connections>
-                                    <action selector="btnEditar:" destination="3yi-Ee-jjI" eventType="touchUpInside" id="4o2-Uh-Chs"/>
-                                    <action selector="btnGrabar:" destination="hM0-Sb-vvz" eventType="touchUpInside" id="4gD-RK-fxM"/>
+                                    <action selector="btnEditar:" destination="3yi-Ee-jjI" eventType="touchUpInside" id="mgK-J9-kui"/>
+                                    <action selector="btnEliminar:" destination="3yi-Ee-jjI" eventType="touchUpInside" id="jR8-iU-EjL"/>
+                                    <action selector="btnGrabar:" destination="hM0-Sb-vvz" eventType="touchUpInside" id="gWE-l9-W8f"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Codigo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ja8-uP-6BY">
@@ -580,6 +581,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xEX-yG-CdV">
+                                <rect key="frame" x="46" y="576" width="125" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Modificar"/>
+                                <connections>
+                                    <action selector="btnEditar:" destination="3yi-Ee-jjI" eventType="touchUpInside" id="4o2-Uh-Chs"/>
+                                    <action selector="btnGrabar:" destination="hM0-Sb-vvz" eventType="touchUpInside" id="4gD-RK-fxM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qQ5-sX-veX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
