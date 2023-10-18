@@ -67,7 +67,7 @@ class NuevoMedicamentoViewController: UIViewController {
         precio = Double(txtPrecio.text ?? "0") ?? 0;
         fecha = txtFecha.text ?? "";
         
-        var medicamento = Medicamento(codigo: 0, nombre: nombre, descripcion: descripcion, stock: stock, precio: precio, fecha: fecha);
+        let medicamento = Medicamento(codigo: 0, nombre: nombre, descripcion: descripcion, stock: stock, precio: precio, fecha: fecha);
         
         saveMedicamento(bean: medicamento);
     }

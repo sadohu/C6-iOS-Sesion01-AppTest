@@ -10,6 +10,7 @@ import UIKit
 class MedicamentoViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var medicamentoList : [Medicamento] = [];
+    var indexMedicamento : Int = -1;
 
     @IBOutlet weak var tvMedicamentos: UITableView!
     
@@ -53,6 +54,18 @@ class MedicamentoViewController: UIViewController, UITableViewDataSource, UITabl
         vista.lblCodigo.text = "Codigo: " + String( medicamentoList[indexPath.row].codigo);
         vista.lblNombre.text = "Nombre: " + String( medicamentoList[indexPath.row].nombre);
         return vista;
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        indexMedicamento = indexPath.row;
+        performSegue(withIdentifier: "editarMedicamentoView", sender: self);
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "editarMedicamentoView"){
+            let view = segue.destination as! EditarMedicamentoViewController;
+            view.medicamento = medicamentoList[indexMedicamento];
+        }
     }
     
     @IBAction func btnNuevo(_ sender: UIButton) {
