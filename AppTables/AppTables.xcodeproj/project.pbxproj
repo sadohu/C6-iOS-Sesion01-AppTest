@@ -10,6 +10,7 @@
 		1D715EA1146CB28501C63289 /* Pods_AppTables.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AE0AB991DEBDFDB7D2FE880 /* Pods_AppTables.framework */; };
 		417367112AE0B91600F0627F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 417367102AE0B91600F0627F /* GoogleService-Info.plist */; };
 		417367142AE0BD3700F0627F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417367132AE0BD3700F0627F /* LoginViewController.swift */; };
+		417367162AE0CC5C00F0627F /* NewUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417367152AE0CC5C00F0627F /* NewUserViewController.swift */; };
 		41B7A9422AC50028003D83D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B7A9412AC50028003D83D2 /* AppDelegate.swift */; };
 		41B7A9442AC50028003D83D2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B7A9432AC50028003D83D2 /* SceneDelegate.swift */; };
 		41B7A9462AC50028003D83D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B7A9452AC50028003D83D2 /* ViewController.swift */; };
@@ -35,6 +36,7 @@
 /* Begin PBXFileReference section */
 		417367102AE0B91600F0627F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		417367132AE0BD3700F0627F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		417367152AE0CC5C00F0627F /* NewUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserViewController.swift; sourceTree = "<group>"; };
 		41B7A93E2AC50028003D83D2 /* AppTables.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppTables.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41B7A9412AC50028003D83D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41B7A9432AC50028003D83D2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				417367132AE0BD3700F0627F /* LoginViewController.swift */,
+				417367152AE0CC5C00F0627F /* NewUserViewController.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				417367162AE0CC5C00F0627F /* NewUserViewController.swift in Sources */,
 				417367142AE0BD3700F0627F /* LoginViewController.swift in Sources */,
 				41D6AB252AD79A7F00384BB2 /* EditarMedicamentoViewController.swift in Sources */,
 				41B7A95C2AC516A8003D83D2 /* DatosViewController.swift in Sources */,
