@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D715EA1146CB28501C63289 /* Pods_AppTables.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AE0AB991DEBDFDB7D2FE880 /* Pods_AppTables.framework */; };
+		417367112AE0B91600F0627F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 417367102AE0B91600F0627F /* GoogleService-Info.plist */; };
+		417367142AE0BD3700F0627F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417367132AE0BD3700F0627F /* LoginViewController.swift */; };
 		41B7A9422AC50028003D83D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B7A9412AC50028003D83D2 /* AppDelegate.swift */; };
 		41B7A9442AC50028003D83D2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B7A9432AC50028003D83D2 /* SceneDelegate.swift */; };
 		41B7A9462AC50028003D83D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B7A9452AC50028003D83D2 /* ViewController.swift */; };
@@ -30,6 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		417367102AE0B91600F0627F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		417367132AE0BD3700F0627F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		41B7A93E2AC50028003D83D2 /* AppTables.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppTables.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41B7A9412AC50028003D83D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41B7A9432AC50028003D83D2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +57,9 @@
 		41D6AB202AD7828600384BB2 /* MedicamentoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicamentoTableViewCell.swift; sourceTree = "<group>"; };
 		41D6AB222AD78AB600384BB2 /* NuevoMedicamentoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NuevoMedicamentoViewController.swift; sourceTree = "<group>"; };
 		41D6AB242AD79A7F00384BB2 /* EditarMedicamentoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditarMedicamentoViewController.swift; sourceTree = "<group>"; };
+		5AE0AB991DEBDFDB7D2FE880 /* Pods_AppTables.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppTables.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		644181C01C5D04713D0818D0 /* Pods-AppTables.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppTables.debug.xcconfig"; path = "Target Support Files/Pods-AppTables/Pods-AppTables.debug.xcconfig"; sourceTree = "<group>"; };
+		7F76343E409EDD15AD88A680 /* Pods-AppTables.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppTables.release.xcconfig"; path = "Target Support Files/Pods-AppTables/Pods-AppTables.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,17 +67,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D715EA1146CB28501C63289 /* Pods_AppTables.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		417367122AE0BD0D00F0627F /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				417367132AE0BD3700F0627F /* LoginViewController.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
 		41B7A9352AC50028003D83D2 = {
 			isa = PBXGroup;
 			children = (
 				41B7A9402AC50028003D83D2 /* AppTables */,
 				41B7A93F2AC50028003D83D2 /* Products */,
+				A4CDEAAEBBBA03B2DFD5652C /* Pods */,
+				BE9926138C3CFB0E2B1721B6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,6 +103,8 @@
 		41B7A9402AC50028003D83D2 /* AppTables */ = {
 			isa = PBXGroup;
 			children = (
+				417367122AE0BD0D00F0627F /* Authentication */,
+				417367102AE0B91600F0627F /* GoogleService-Info.plist */,
 				41D6AB1B2AD77AA700384BB2 /* Medicamento */,
 				41B7A9412AC50028003D83D2 /* AppDelegate.swift */,
 				41B92C062ACE028E00FB17C8 /* ClienteController.swift */,
@@ -117,6 +138,23 @@
 			path = Medicamento;
 			sourceTree = "<group>";
 		};
+		A4CDEAAEBBBA03B2DFD5652C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				644181C01C5D04713D0818D0 /* Pods-AppTables.debug.xcconfig */,
+				7F76343E409EDD15AD88A680 /* Pods-AppTables.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BE9926138C3CFB0E2B1721B6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5AE0AB991DEBDFDB7D2FE880 /* Pods_AppTables.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -124,9 +162,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 41B7A9522AC5002A003D83D2 /* Build configuration list for PBXNativeTarget "AppTables" */;
 			buildPhases = (
+				FF074B634FCCF12DF4251E9E /* [CP] Check Pods Manifest.lock */,
 				41B7A93A2AC50028003D83D2 /* Sources */,
 				41B7A93B2AC50028003D83D2 /* Frameworks */,
 				41B7A93C2AC50028003D83D2 /* Resources */,
+				7B50F0423905F9BDAC15F9C8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -176,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				41B7A94E2AC5002A003D83D2 /* LaunchScreen.storyboard in Resources */,
+				417367112AE0B91600F0627F /* GoogleService-Info.plist in Resources */,
 				41B7A94B2AC5002A003D83D2 /* Assets.xcassets in Resources */,
 				41B7A9492AC50028003D83D2 /* Main.storyboard in Resources */,
 			);
@@ -183,11 +224,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7B50F0423905F9BDAC15F9C8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AppTables/Pods-AppTables-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AppTables/Pods-AppTables-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AppTables/Pods-AppTables-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF074B634FCCF12DF4251E9E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AppTables-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		41B7A93A2AC50028003D83D2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				417367142AE0BD3700F0627F /* LoginViewController.swift in Sources */,
 				41D6AB252AD79A7F00384BB2 /* EditarMedicamentoViewController.swift in Sources */,
 				41B7A95C2AC516A8003D83D2 /* DatosViewController.swift in Sources */,
 				41D6AB232AD78AB600384BB2 /* NuevoMedicamentoViewController.swift in Sources */,
@@ -346,6 +430,7 @@
 		};
 		41B7A9532AC5002A003D83D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 644181C01C5D04713D0818D0 /* Pods-AppTables.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -373,6 +458,7 @@
 		};
 		41B7A9542AC5002A003D83D2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F76343E409EDD15AD88A680 /* Pods-AppTables.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
