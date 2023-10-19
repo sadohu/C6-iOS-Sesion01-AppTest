@@ -27,7 +27,13 @@ class LoginViewController: UIViewController {
         // Validacion de credenciales
         Auth.auth().signIn(withEmail: username, password: password){
             result, error in
-            print("Aier si es verdad");
+            // Validar el Optinal<result>: correcto(Objecto), incorrecto(nulo)
+            if let dataAuth = result{
+                print("Credenciales correctas.");
+                print(dataAuth.user.uid);
+            }else{
+                print("Credenciales incorrectas.");
+            }
         }
     }
 
