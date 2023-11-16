@@ -21,5 +21,22 @@
 			</array>
 		</dict>
 	</dict>
+    <!-- Facebook config -->
+    <key>CFBundleURLTypes</key>
+    <array>
+      <dict>
+      <key>CFBundleURLSchemes</key>
+      <array>
+        <string>fb1582859865862956</string>
+      </array>
+      </dict>
+    </array>
+    <key>FacebookAppID</key>
+    <string>1582859865862956</string>
+    <key>FacebookClientToken</key>
+    <string>543dfd75a53c7cc8c19b903a4ff82b15</string>
+    <key>FacebookDisplayName</key>
+    <string>Cibertec-iOS-AppTables</string>
+    
 </dict>
 </plist>
