@@ -380,16 +380,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozK-Jg-kFe">
-                                <rect key="frame" x="106" y="59" width="182" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Nuevo medicamento"/>
-                                <connections>
-                                    <action selector="btnNuevo:" destination="D5C-38-btH" eventType="touchUpInside" id="k7C-sb-aiX"/>
-                                    <segue destination="hM0-Sb-vvz" kind="show" identifier="nuevoMedicamentoView" id="ZQH-8m-F1s"/>
-                                </connections>
-                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="wQY-CO-KV4">
                                 <rect key="frame" x="16" y="186" width="361" height="583"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -425,6 +415,16 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozK-Jg-kFe">
+                                <rect key="frame" x="105" y="103" width="182" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Nuevo medicamento"/>
+                                <connections>
+                                    <action selector="btnNuevo:" destination="D5C-38-btH" eventType="touchUpInside" id="k7C-sb-aiX"/>
+                                    <segue destination="hM0-Sb-vvz" kind="show" identifier="nuevoMedicamentoView" id="ZQH-8m-F1s"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vUy-if-MLV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -667,11 +667,16 @@
                                     <segue destination="Gq7-Uz-Tip" kind="show" id="gdk-i7-kcy"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YTt-RT-WuB">
+                                <rect key="frame" x="76" y="96" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tSc-pM-vfK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="img" destination="YTt-RT-WuB" id="Cep-Dz-LZR"/>
                         <outlet property="txtPassword" destination="2w3-Yf-FWz" id="dqK-Hv-YNl"/>
                         <outlet property="txtUser" destination="46f-xu-jgb" id="R5q-Ra-AeU"/>
                     </connections>
@@ -679,6 +684,28 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fiC-b7-Yto" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2648.0916030534349" y="1162.6760563380283"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="jLQ-Zg-Axh">
+            <objects>
+                <viewController id="j7b-Y2-pJH" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2Lv-3d-siw">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="G0c-W9-MPN">
+                                <rect key="frame" x="16" y="326" width="361" height="454"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VaZ-Go-WtN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YKi-NY-KLH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3993" y="1868"/>
         </scene>
         <!--New User View Controller-->
         <scene sceneID="TVS-Ph-gU2">

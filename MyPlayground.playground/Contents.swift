@@ -255,3 +255,120 @@ print("1. Unidad:", result1.0)
 print("2. Decena:", result1.1)
 print("3. Centena:", result1.2)
 print("4. Mayor Número:", result1.3)
+
+
+
+struct Categoria: Codable {
+    var id: Int
+    var idCategoria: Int
+    var nombre: String
+    var tipo: String
+    var imagen: String
+}
+
+// Crear un arreglo de objetos Categoria
+let categorias: [Categoria] = [
+    Categoria(id: 1, idCategoria: 1, nombre: "Categoria1", tipo: "TipoA", imagen: "imagen1.jpg"),
+    Categoria(id: 2, idCategoria: 1, nombre: "Categoria1", tipo: "TipoB", imagen: "imagen2.jpg"),
+    Categoria(id: 3, idCategoria: 2, nombre: "Categoria2", tipo: "TipoC", imagen: "imagen3.jpg"),
+    Categoria(id: 4, idCategoria: 3, nombre: "Categoria3", tipo: "TipoD", imagen: "imagen4.jpg"),
+    Categoria(id: 5, idCategoria: 2, nombre: "Categoria2", tipo: "TipoE", imagen: "imagen5.jpg"),
+]
+
+//// Crear un diccionario para agrupar por idCategoria
+//var categoriasAgrupadas: [Int: [Categoria]] = [:]
+//
+//// Iterar a través de las categorías y agruparlas por idCategoria
+//for categoria in categorias {
+//    if var categoriasDelMismoId = categoriasAgrupadas[categoria.idCategoria] {
+//        categoriasDelMismoId.append(categoria)
+//        categoriasAgrupadas[categoria.idCategoria] = categoriasDelMismoId
+//    } else {
+//        categoriasAgrupadas[categoria.idCategoria] = [categoria]
+//    }
+//}
+//
+//// Ahora tienes un diccionario donde las categorías se agrupan por idCategoria
+//
+//// Obtener un arreglo con un elemento por idCategoria
+//var categoriasFiltradas: [Categoria] = []
+//
+//for (_, categoriasConMismoId) in categoriasAgrupadas {
+//    if let primeraCategoria = categoriasConMismoId.first {
+//        categoriasFiltradas.append(primeraCategoria)
+//    }
+//}
+var categoriasFiltradas: [Int : Categoria] = [:]
+
+for categoria in categorias {
+    if categoriasFiltradas[categoria.idCategoria] == nil {
+        categoriasFiltradas[categoria.idCategoria] = categoria
+    }
+}
+
+// Convertir el diccionario en un arreglo de elementos únicos
+let categoriasUnicas = Array(categoriasFiltradas.values)
+
+
+var listasd : [Int:[Categoria]] = [:];
+
+
+
+func getCategoriasPorSeccion(_ list: [Categoria]) -> [Int: [Categoria]] {
+    var categoriasPorSeccion: [Int: [Categoria]] = [:]
+
+    for categoria in list {
+        if categoriasPorSeccion[categoria.idCategoria] == nil {
+            categoriasPorSeccion[categoria.idCategoria] = [categoria]
+        } else {
+            categoriasPorSeccion[categoria.idCategoria]?.append(categoria)
+        }
+    }
+
+    return categoriasPorSeccion
+}
+
+listasd = getCategoriasPorSeccion(categorias);
+let seccion = Array(listasd.values)
+let ids = Array(listasd.keys);
+print(ids);
+print("=========")
+
+for x in 0...2 {
+    print(seccion[x])
+    print("=========")
+}
+
+
+let categorias2: [Categoria] = listasd[3]!;
+
+
+
+
+
+
+func getCategoriasFrom() -> [Categoria]{
+    var list : [Categoria] = [];
+    
+    let URLAPI = "https://puedeser.onrender.com/medicamento/lista";
+    let url = URL(string: URLAPI);
+    let task = URLSession.shared.dataTask(with: url!) { data, urlResponse, error in
+        do{
+            if(error == nil){
+                // [Medicamento] hace referencia a más de un objeto, de ser solo uno indicar solo como: Medicamento
+                let decodeData = try JSONDecoder().decode([Categoria].self, from: data!);
+                list = decodeData;
+                print(list);
+            }
+        }catch{
+            print(error.localizedDescription);
+        }
+    }
+    
+    // Inicar tarea
+    task.resume();
+    return list;
+}
+
+var list = getCategoriasFrom();
+print(list);
