@@ -671,6 +671,15 @@
                                 <rect key="frame" x="76" y="96" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rH8-8A-E4I">
+                                <rect key="frame" x="106" y="639" width="181" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Iniciar con Facebook"/>
+                                <connections>
+                                    <action selector="btnFacebookLogin:" destination="vyx-5F-Xor" eventType="touchUpInside" id="APq-Ys-d9a"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tSc-pM-vfK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

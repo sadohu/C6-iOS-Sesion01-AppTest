@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseAuth
+import FBSDKLoginKit
 
 class LoginViewController: UIViewController {
     @IBOutlet weak var txtUser: UITextField!
@@ -42,4 +43,27 @@ class LoginViewController: UIViewController {
         }
     }
 
+    @IBAction func btnFacebookLogin(_ sender: UIButton) {
+        let loginManger = LoginManager();
+        loginManger.logIn(permissions: ["email"], from: self){
+            [weak self] (result, error) in
+            guard error == nil else{
+                print(error!.localizedDescription);
+                return;
+            }
+            
+            guard let result = result, !result.isCancelled else{
+                loginManger.logOut();
+                print("Usuario canceló proceso.");
+                return;
+            }
+        }
+        
+        Profile.loadCurrentProfile{ (profile, error) in
+            print(Profile.current?.name ?? "");
+            print(Profile.current?.lastName ?? "");
+            print(Profile.current?.email ?? "");
+            // Sent to Home View
+        }
+    }
 }
